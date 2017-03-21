@@ -5,6 +5,7 @@ import se.nackademin.gui.FortuneTellerGui;
 public class FortuneTeller {
     MagicNumbers magicNumbers;
     FortuneTellerGui fortuneTellerGui;
+    Translator translator;
 
     /*
      * Returns a fortune based on name, income, location, age and height
@@ -18,6 +19,7 @@ public class FortuneTeller {
      */
     public String calculate() {
         //TODO: Implement
+        String translation = translator.translate(magicNumbers);
         return "Not implemented!";
     }
 
@@ -28,7 +30,7 @@ public class FortuneTeller {
     FortuneTeller() {
         fortuneTellerGui = new FortuneTellerGui(this);
         magicNumbers = new MagicNumbers();
-
+        
     }
 
     public boolean setName(String name) {

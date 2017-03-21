@@ -12,6 +12,7 @@
         <jacoco.maven.plugin.version>0.7.6.201602180812</jacoco.maven.plugin.version>
         <junit.version>4.12</junit.version>
     </properties>
+	<!-- hej! --> 
     <build>
         <plugins>
             <plugin>

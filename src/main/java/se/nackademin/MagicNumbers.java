@@ -9,28 +9,68 @@ public class MagicNumbers {
     private int height;
 
     public int calculateA() {
-        //TODO: calculate A
-        return 0;
+        int spacecount = 1; //skulle också kunna vara 0, med en spacecount++ mellan rad 18 och 19
+        for(int i = 0; i < name.length(); i++){
+            if(name.charAt(i) == ' '){
+                spacecount++;
+            }
+        } 
+        spacecount = spacecount + age; 
+        while(spacecount >= 10){
+            spacecount = spacecount - 7;
+        }
+        return spacecount;
     }
 
     public int calculateB() {
-        //TODO: calculate B
-        return 0;
+        int charcount = location.length();
+        charcount = charcount + income; 
+        while(charcount >= 10){
+            charcount = charcount - 7;
+        }
+        
+        return charcount;
     }
 
     public int calculateC() {
-        //TODO: calculate C
-        return 0;
+        int numberC = this.calculateA() + this.calculateB();
+        numberC = numberC - height;
+        while(numberC < 0){
+            numberC = numberC + 10;
+        }
+        
+        return numberC;
     }
 
     public int calculateD() {
-        //TODO: calculate D
-        return 0;
+        int numberD = this.calculateA();
+        if( numberD > 5){
+            numberD = numberD + this.calculateB();
+        } else numberD = numberD + this.calculateC();
+        numberD = numberD - income;
+        while(numberD < 0){
+            numberD = numberD + 10;
+        }
+        return numberD;
     }
 
     public int calculateE() {
         //TODO: calculate E
-        return 0;
+        double numberE;
+        numberE = Math.sqrt((age * income * income * height));
+        
+        Long numblong;
+        int numbanswer;
+        numblong = Math.round(numberE);
+        numbanswer = numblong.intValue();
+        
+        while(numbanswer >= 10){
+            numbanswer = numbanswer / 2;
+            numberE = Math.round(numberE);
+        }
+        
+        
+        return numbanswer;
     }
 
     public void setName(String name) {
