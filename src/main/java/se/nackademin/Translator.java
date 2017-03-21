@@ -10,12 +10,9 @@ package se.nackademin;
  * @author testautomatisering
  */
 public class Translator {
+    Translator() {  
+    }
     
-    /**
-     * this function recieves a number and returns an appropriate adjective. 
-     * @param index
-     * @return reply
-     */
     public String adjTranslate(int index) {
         String reply = null;
         switch(index){
@@ -98,8 +95,8 @@ public class Translator {
     
     
     String translate(MagicNumbers magicNumbers) {
-        String translation = null;
-        translation = "Din framtid är " + adjTranslate(magicNumbers.calculateA()) + ". Du borde sluta " + subTranslate(magicNumbers.calculateB()) + ". Vi ser att du snart kommer att skaffa " + subTranslate(magicNumbers.calculateC()) + ". Snart kommer du vilja " + verTranslate(magicNumbers.calculateD()) + ", men då är det viktigt att du är " + adjTranslate(magicNumbers.calculateE()) + ".";
+        String translation;
+        translation = "Din framtid är " + adjTranslate(magicNumbers.calculateA()) + ". Du borde sluta " + verTranslate(magicNumbers.calculateB()) + ". Vi ser att du snart kommer att skaffa " + subTranslate(magicNumbers.calculateC()) + ". Snart kommer du vilja " + verTranslate(magicNumbers.calculateD()) + ", men då är det viktigt att du är " + adjTranslate(magicNumbers.calculateE()) + ".";
         
         return translation; 
     }

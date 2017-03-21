@@ -20,7 +20,7 @@ public class FortuneTeller {
     public String calculate() {
         //TODO: Implement
         String translation = translator.translate(magicNumbers);
-        return "Not implemented!";
+        return translation;
     }
 
     public static void main(String[] args) {
@@ -30,6 +30,7 @@ public class FortuneTeller {
     FortuneTeller() {
         fortuneTellerGui = new FortuneTellerGui(this);
         magicNumbers = new MagicNumbers();
+        translator = new Translator();
         
     }
 
